@@ -1,7 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/", "destination": "/sosuworld/", "permanent": false },
     { "source": "/sosuworld", "destination": "/sosuworld/", "permanent": false }
   ],
   "rewrites": [
