@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무무월드 — 교과 학습 앱</title>
+    <meta name="description" content="초등 교과 수업에 바로 쓰는 학습 앱 모음. 설치 없이 링크만 열면 됩니다." />
+    <meta property="og:title" content="무무월드 — 교과 학습 앱" />
+    <meta property="og:description" content="초등 교과 수업에 바로 쓰는 학습 앱 모음. 설치 없이 링크만 열면 됩니다." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gothic+A1:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* 소수 던전과 같은 색을 쓴다 — 링크를 눌러 들어갔을 때 같은 집으로 읽히게 */
+      :root {
+        --ground: #14100d;
+        --panel: #241c15;
+        --panel2: #31261a;
+        --edge: #4a3a26;
+        --ink: #f4e9d4;
+        --ink2: #b8a68a;
+        --ink3: #8a7a62;
+        --torch: #f0a92e;
+        --torch2: #ffd166;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--ground);
+        color: var(--ink);
+        font-family: 'Gothic A1', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 760px; margin: 0 auto; padding: 56px 20px 80px; }
+      header { margin-bottom: 40px; }
+      .eyebrow {
+        font-size: 13px; letter-spacing: .18em; color: var(--torch);
+        margin: 0 0 10px;
+      }
+      h1 {
+        font-family: 'Do Hyeon', sans-serif;
+        font-size: 44px; margin: 0 0 12px; color: var(--torch2);
+      }
+      .lede { margin: 0; color: var(--ink2); line-height: 1.7; font-size: 16px; }
+
+      h2 {
+        font-family: 'Do Hyeon', sans-serif;
+        font-size: 18px; color: var(--ink3);
+        margin: 40px 0 14px; font-weight: 400;
+      }
+
+      .card {
+        display: flex; align-items: stretch; gap: 18px;
+        background: var(--panel); border: 2px solid var(--edge); border-radius: 4px;
+        text-decoration: none; color: inherit; overflow: hidden;
+        transition: border-color .12s;
+      }
+      .card:hover, .card:focus-visible { border-color: var(--torch); outline: none; }
+      .card .tag {
+        display: grid; place-items: center; width: 92px; flex: none;
+        background: var(--panel2); border-right: 2px solid var(--edge);
+        font-family: 'Do Hyeon', sans-serif; font-size: 15px; color: var(--torch2);
+        line-height: 1.35; text-align: center; padding: 8px;
+      }
+      .card .body { padding: 18px 20px 18px 0; min-width: 0; }
+      .card h3 {
+        font-family: 'Do Hyeon', sans-serif; font-size: 22px;
+        margin: 0 0 6px; color: var(--ink);
+      }
+      .card p { margin: 0; color: var(--ink2); font-size: 14px; line-height: 1.65; }
+      .card .meta { margin-top: 8px; color: var(--ink3); font-size: 13px; }
+
+      .note {
+        margin-top: 34px; padding: 16px 18px;
+        border-left: 4px solid var(--edge); background: #1b1510;
+        color: var(--ink3); font-size: 13px; line-height: 1.8;
+      }
+      .note b { color: var(--ink2); font-weight: 500; }
+
+      footer {
+        margin-top: 52px; padding-top: 20px; border-top: 1px solid var(--edge);
+        color: var(--ink3); font-size: 12px; line-height: 1.8;
+      }
+      @media (max-width: 520px) {
+        h1 { font-size: 34px; }
+        .card .tag { width: 72px; font-size: 13px; }
+        .card .body { padding: 14px 16px 14px 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <p class="eyebrow">초등 교과 학습 앱</p>
+        <h1>무무월드</h1>
+        <p class="lede">
+          수업에 바로 쓰는 학습 앱을 모아 둡니다.<br />
+          설치도 로그인도 없습니다. 링크만 열면 됩니다.
+        </p>
+      </header>
+
+      <h2>수학</h2>
+
+      <a class="card" href="/sosu/">
+        <span class="tag">4-2<br />3단원</span>
+        <span class="body">
+          <h3>소수 던전</h3>
+          <p>
+            소수의 덧셈과 뺄셈. 던전 한 층이 교과서 한 차시입니다.
+            차시를 골라 들어가 형성평가로 쓰고, 학급 기록을 CSV로 내려받습니다.
+          </p>
+          <p class="meta">10차시 · 오개념 진단 · 보충/심화 분기</p>
+        </span>
+      </a>
+
+      <p class="note">
+        <b>기록은 그 기기의 브라우저에만 저장됩니다.</b> 서버로 보내지 않습니다.
+        학생이 다른 기기로 가면 기록이 따라가지 않으니, 수업 끝에
+        <b>학습 기록 → CSV 내려받기</b>로 걷어 두세요.
+      </p>
+
+      <footer>
+        교사용 지도서의 단원 전개 계획을 따라 만들었습니다.<br />
+        문의·제안은 인디스쿨 게시글 댓글로 남겨 주세요.
+      </footer>
+    </main>
+  </body>
+</html>
