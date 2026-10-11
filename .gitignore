@@ -1,2 +1,5 @@
 .vercel
+.wrangler
 .DS_Store
+projects.json
+node_modules
